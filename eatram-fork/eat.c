@@ -25,7 +25,7 @@ int main( int argc, char *argv[] )
     if(argc > 2)
         max_proc = atoi(argv[2]);
 
-    p = (pid_t *)malloc(max_proc);
+    p = (pid_t *)malloc(sizeof(pid_t) * max_proc);
     if (p == NULL) {
         perror("malloc failed");
         return 255;
